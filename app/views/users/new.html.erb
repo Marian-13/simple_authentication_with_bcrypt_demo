@@ -1,5 +1,15 @@
-<h1>Sign Up</h1>
+<%= content_tag :div, class: 'panel panel-default', id: 'sign-up-panel' do %>
 
-<%= render 'form', user: @user %>
+  <%= content_tag :div, class: 'panel-heading' do %>
+    <%= content_tag :h2, 'Sign Up' %>
+  <% end %>
 
-Already have an account? <%= link_to 'Log in', log_in_path %>
+  <%= content_tag :div, class: 'panel-body' do %>
+    <%= render 'form', user: @user %>
+  <% end  %>
+
+  <%= content_tag :div, class: 'panel-footer' do %>
+    Already have an account? <%= link_to 'Log in', log_in_path %>
+  <% end %>
+
+<% end  %>

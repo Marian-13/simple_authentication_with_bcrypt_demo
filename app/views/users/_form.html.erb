@@ -1,29 +1,8 @@
-<% if user.errors.any? %>
-  <% user.errors.full_messages.each do |message| %>
-    <div class="error"><%= message %></div>
-  <% end %>
-<% end  %>
+<%= form_for :user, class: 'form-group' do |form| %>
+  <%= render 'name_elements', user: @user, form: form %>
+  <%= render 'email_elements', user: @user, form: form %>
+  <%= render 'password_elements', user: @user, form: form %>
+  <%= render 'password_confirmation_elements', user: @user, form: form %>
 
-<%= form_for :user do |f| %>
-  <div class="field">
-    <%= f.label :name, 'Name:' %>
-    <%= f.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= f.label :email, 'Email:' %>
-    <%= f.text_field :email %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password, 'Password:' %>
-    <%= f.password_field :password %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation, 'Password Confirmation:' %>
-    <%= f.password_field :password_confirmation %>
-  </div>
-
-  <%= f.submit 'Submit' %>
+  <%= form.submit 'Submit', class: 'btn btn-default', id: 'submit' %>
 <% end %>

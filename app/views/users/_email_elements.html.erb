@@ -1,0 +1,16 @@
+<%= form.label :email, 'Email:' %>
+
+<% if !user.errors[:email].blank? %>
+  <%= render 'email_field', form: form, class_name: 'form-control sign-up-field-with-error' %>
+
+  <% user.errors.full_messages_for(:email).each do |message| %>
+    <%= content_tag :div, class: 'alert alert-danger sign-up-error' do %>
+      <%= message %>
+    <% end %>
+  <% end %>
+
+<% else %>
+  <%= render 'email_field', form: form, class_name: 'form-control' %>
+<% end %>
+
+<br />

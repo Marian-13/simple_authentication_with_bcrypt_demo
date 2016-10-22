@@ -1,21 +1,4 @@
-<%= label_tag :email, 'Email:' %>
-
-<% if flash[:notice_email_errors] %>
-  <%= text_field_tag :email, nil, class: 'form-control log-in-field-with-error',
-                                  value: params[:email],
-                                  placeholder: 'Enter email',
-                                  onkeydown: "Sessions.focusOn('password')" %>
-
-  <% flash[:notice_email_errors].each do |message| %>
-    <%= content_tag :div, class: 'alert alert-danger log-in-error' do %>
-      <%= message %>
-    <% end %>
-  <% end %>
-<% else %>
-  <%= text_field_tag :email, nil, class: 'form-control',
-                                  value: params[:email],
-                                  placeholder: 'Enter email',
-                                  onkeydown: "Sessions.focusOn('password')" %>
-<% end %>
-
-<br />
+<%= text_field_tag :email, nil, class: class_name,
+                                value: params[:email],
+                                placeholder: 'Enter email',
+                                onkeydown: "App.focusOn('password')" %>

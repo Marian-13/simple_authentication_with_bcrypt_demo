@@ -1,0 +1,17 @@
+<%= label_tag :email, 'Email:' %>
+
+<% if flash[:notice_email_errors] %>
+  <%= render 'email_field', class_name: 'form-control log-in-field-with-error' %>
+
+  <% flash[:notice_email_errors].each do |message| %>
+    <%= content_tag :div, class: 'alert alert-danger log-in-error' do %>
+      <%= message %>
+    <% end %>
+  <% end %>
+
+  <% flash[:notice_email_errors] = nil # TODO helper %>
+<% else %>
+  <%= render 'email_field', class_name: 'form-control' %>
+<% end %>
+
+<br />

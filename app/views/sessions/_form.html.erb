@@ -1,0 +1,5 @@
+<%= form_tag log_in_path, class: 'form-group' do %>
+  <%= render 'email_elements' %>
+  <%= render 'password_elements' %>
+  <%= submit_tag 'Submit', class: 'btn btn-default', id: 'submit' %>
+<% end %>

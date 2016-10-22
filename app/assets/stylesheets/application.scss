@@ -3,6 +3,7 @@
 
 @import "*";
 
+/* For responsiveness --------------------------------------------------------*/
 /* General */
 [class*="col-"] {
   box-sizing: border-box;
@@ -43,4 +44,20 @@
   .col-10 { width: 83.33%; }
   .col-11 { width: 91.66%; }
   .col-12 { width: 100%; }
+}
+
+/*----------------------------------------------------------------------------*/
+
+.authentication-panel {
+  box-shadow: 5px 5px 20px gray;
+}
+
+.error {
+  padding: 0px 1em;
+  margin: 2px 0 0 0;
+}
+
+.field-with-error {
+  /* border-color: #ff6666; */
+  @extend .has-error;
 }

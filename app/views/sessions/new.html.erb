@@ -5,11 +5,7 @@
   <% end %>
 
   <%= content_tag :div, class: 'panel-body' do %>
-    <%= form_tag log_in_path, class: 'form-group' do %>
-      <%= render 'email_field' %>
-      <%= render 'password_field' %>
-      <%= submit_tag 'Submit', class: 'btn btn-default', id: 'submit' %>
-    <% end %>
+    <%= render 'form' %>
   <% end  %>
 
   <%= content_tag :div, class: 'panel-footer' do %>

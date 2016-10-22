@@ -26,13 +26,6 @@ class SessionsController < ApplicationController
         render :new
       end
     end
-
-    # if @user && @user.authenticate(params[:password])
-    #   session[:user_id] = @user.id
-    #   redirect_to root_path
-    # else
-    #   render :new
-    # end
   end
 
   def destroy
