@@ -1,0 +1,14 @@
+#log-in-panel {
+  @extend .col-3;
+  @extend .col-m-5;
+  margin: 1em;
+}
+
+.log-in-error {
+  padding: 0px 1em;
+  margin: 2px 0 0 0;
+}
+
+.log-in-field-with-error {
+  border-color: #ff6666;
+}
