@@ -20,5 +20,14 @@
 # Ignore Byebug command history file.
 .byebug_history
 
-# 
+#
 /simple_authentication_with_bcrypr.txt
+
+#
+/outdated
+
+#
+/app/assets/images/*.jpg
+
+#
+/app/controllers/home_controller.rb

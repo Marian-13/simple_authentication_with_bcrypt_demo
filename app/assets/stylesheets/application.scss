@@ -5,50 +5,58 @@
 
 /* For responsiveness --------------------------------------------------------*/
 /* General */
-[class*="col-"] {
-  box-sizing: border-box;
+.app-row::after {
+  content: "";
+  clear: both;
+  display: block;
 }
 
 /* For mobile phones: */
-[class*="col-"] {
+[class*="column-"] {
   width: 100%;
+  box-sizing: border-box;
+  display: inline-block;
 }
 
 @media only screen and (min-width: 430px) {
   /* For tablets: */
-  .col-m-1  { width: 8.33%; }
-  .col-m-2  { width: 16.66%; }
-  .col-m-3  { width: 25%; }
-  .col-m-4  { width: 33.33%; }
-  .col-m-5  { width: 41.66%; }
-  .col-m-6  { width: 50%; }
-  .col-m-7  { width: 58.33%; }
-  .col-m-8  { width: 66.66%; }
-  .col-m-9  { width: 75%; }
-  .col-m-10 { width: 83.33%; }
-  .col-m-11 { width: 91.66%; }
-  .col-m-12 { width: 100%; }
+  .column-m-1  { width: 8.33%;  box-sizing: border-box; display: inline-block; }
+  .column-m-2  { width: 16.66%; box-sizing: border-box; display: inline-block; }
+  .column-m-3  { width: 25%;    box-sizing: border-box; display: inline-block; }
+  .column-m-4  { width: 33.33%; box-sizing: border-box; display: inline-block; }
+  .column-m-5  { width: 41.66%; box-sizing: border-box; display: inline-block; }
+  .column-m-6  { width: 50%;    box-sizing: border-box; display: inline-block; }
+  .column-m-7  { width: 58.33%; box-sizing: border-box; display: inline-block; }
+  .column-m-8  { width: 66.66%; box-sizing: border-box; display: inline-block; }
+  .column-m-9  { width: 75%;    box-sizing: border-box; display: inline-block; }
+  .column-m-10 { width: 83.33%; box-sizing: border-box; display: inline-block; }
+  .column-m-11 { width: 91.66%; box-sizing: border-box; display: inline-block; }
+  .column-m-12 { width: 100%;   box-sizing: border-box; display: inline-block; }
 }
 
 @media only screen and (min-width: 780px) {
   /* For desktop: */
-  .col-1  { width: 8.33%; }
-  .col-2  { width: 16.66%; }
-  .col-3  { width: 25%; }
-  .col-4  { width: 33.33%; }
-  .col-5  { width: 41.66%; }
-  .col-6  { width: 50%; }
-  .col-7  { width: 58.33%; }
-  .col-8  { width: 66.66%; }
-  .col-9  { width: 75%; }
-  .col-10 { width: 83.33%; }
-  .col-11 { width: 91.66%; }
-  .col-12 { width: 100%; }
+  .column-1  { width: 8.33%;  box-sizing: border-box; display: inline-block; }
+  .column-2  { width: 16.66%; box-sizing: border-box; display: inline-block; }
+  .column-3  { width: 25%;    box-sizing: border-box; display: inline-block; }
+  .column-4  { width: 33.33%; box-sizing: border-box; display: inline-block; }
+  .column-5  { width: 41.66%; box-sizing: border-box; display: inline-block; }
+  .column-6  { width: 50%;    box-sizing: border-box; display: inline-block; }
+  .column-7  { width: 58.33%; box-sizing: border-box; display: inline-block; }
+  .column-8  { width: 66.66%; box-sizing: border-box; display: inline-block; }
+  .column-9  { width: 75%;    box-sizing: border-box; display: inline-block; }
+  .column-10 { width: 83.33%; box-sizing: border-box; display: inline-block; }
+  .column-11 { width: 91.66%; box-sizing: border-box; display: inline-block; }
+  .column-12 { width: 100%;   box-sizing: border-box; display: inline-block; }
 }
 
 /*----------------------------------------------------------------------------*/
 
 .authentication-panel {
+  box-shadow: 5px 5px 20px gray;
+}
+
+.app-panel {
   box-shadow: 5px 5px 20px gray;
 }
 
@@ -60,4 +68,9 @@
 .field-with-error {
   /* border-color: #ff6666; */
   @extend .has-error;
+}
+
+#app-container {
+  font-size: 0;
+  /* http://stackoverflow.com/questions/2628050/ignore-whitespace-in-html */
 }

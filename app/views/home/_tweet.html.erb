@@ -1,0 +1,16 @@
+<%= content_tag :div, class: 'tweet-container' do %>
+
+  <%= content_tag :div, class: 'tweet' do %>
+
+    <%= content_tag :div, class: 'tweet-body' do %>
+      <%= image_tag image_source, class: 'tweet-image' %>
+    <% end %>
+
+    <%= content_tag :div, class: 'tweet-footer' do %>
+      Created at: <%= creation_time %> <br />
+      TWitter user name: <%= link_to twitter_user_name, "https://twitter.com/#{twitter_user_name}" %>
+    <% end %>
+
+  <% end %>
+
+<% end %>

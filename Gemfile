@@ -59,3 +59,6 @@ gem 'babel-transpiler'
 # The purpose is to test out BabelJS features on Sprockets 3.x and include it by default in Sprockets 4.x.
 # gem 'rails' contains gem 'sprockets' throught gem 'sprockets-rails'
 gem 'sprockets-es6'
+
+# A Ruby interface to the Twitter API
+gem 'twitter'

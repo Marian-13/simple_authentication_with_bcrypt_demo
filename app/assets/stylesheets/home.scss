@@ -1,3 +1,38 @@
-// Place all the styles related to the Home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.tweet-container {
+  @extend .column-3;
+  @extend .column-m-4;
+
+  border: 5px solid transparent;
+}
+
+.tweet {
+  border-radius: 4px;
+  box-shadow: 5px 5px 20px gray;
+}
+
+.tweet-body {
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+.tweet-image{
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  width: 100%;
+}
+
+.tweet-footer {
+  font-size: 14px;
+  padding: 10px 15px;
+  border-top: 1px solid #ddd;
+  background-color: #f5f5f5;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+/*
+body > *:nth-child(5n+1) {
+  clear: left;
+}*/
+
+/* border-box doesn`t include margin */
