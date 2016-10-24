@@ -10,9 +10,54 @@
 
 /*----------------------------------------------------------------------------*/
 
+.bold {
+  font-style: oblique;
+  font-weight: bold;
+}
+
+nav {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  background: #5f5f5f;
+  height: $nav-height;
+  color: #f1f1f1;
+  font-size: 20px;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  div {
+    @extend .column-2;
+    @extend .column-m-2;
+  }
+
+  ul {
+    list-style: none;
+    float: right;
+
+    li {
+      display: inline-block;
+
+      padding: 0 5px;
+
+      a {
+        color: #bbd9ee;
+      }
+
+      a:hover {
+        color: #089de3;
+      }
+    }
+  }
+}
+
+
+
 .application-body {
   font-size: 0;
   /* http://stackoverflow.com/questions/2628050/ignore-whitespace-in-html */
+  margin-top: $nav-height;
 }
 
 .authentication-container {

@@ -1,7 +1,5 @@
 <%= @tweets.each do |tweet| %>
-  <% unless tweet.media.blank? %>
-    <%= render 'tweet', image_source: tweet.media[0].media_url,
-                        creation_time: tweet.created_at,
-                        twitter_user_name: tweet.user.name %>
-  <% end %>
+  <%= render 'tweet', image_source: tweet.media_url,
+                      creation_time: tweet.creation_time,
+                      twitter_user_name: tweet.user_name %>
 <% end  %>

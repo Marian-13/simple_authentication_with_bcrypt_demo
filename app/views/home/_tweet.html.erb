@@ -1,5 +1,4 @@
 <%= content_tag :div, class: 'tweet-container' do %>
-
   <%= content_tag :div, class: 'tweet' do %>
 
     <%= content_tag :div, class: 'tweet-body' do %>
@@ -7,10 +6,17 @@
     <% end %>
 
     <%= content_tag :div, class: 'tweet-footer' do %>
-      Created at: <%= creation_time %> <br />
-      TWitter user name: <%= link_to twitter_user_name, "https://twitter.com/#{twitter_user_name}" %>
+      <%= content_tag :span, class: 'bold' do %>
+        Created at:
+      <% end %>
+
+      <%= creation_time %> <br />
+
+      <%= content_tag :span, class: 'bold' do %>
+        Twitter user name:
+      <% end %>
+
+      <%= link_to twitter_user_name, "https://twitter.com/#{twitter_user_name}" %>
     <% end %>
-
   <% end %>
-
 <% end %>

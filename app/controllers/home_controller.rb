@@ -2,17 +2,19 @@ class HomeController < ApplicationController
   before_action :authorize
 
   def index
-    @client = Twitter::REST::Client.new do |config|
-      config.consumer_key        = ENV['CONSUMER_KEY']
-      config.consumer_secret     = ENV['CONSUMER_SECRET']
-      config.access_token        = ENV['ACCESS_TOKEN']
-      config.access_token_secret = ENV['ACCESS_TOKEN_SECRET']
-    end
+    respond_to do |format|
+      format.html do
+        begin
+          # @tweets = twitter_client.user_timeline('Lamborghini', count: 50)
+          @tweets = twitter_client.fetch_tweets_with_pictures('Lamborghini', count: 5)
+        rescue Twitter::Error => e
+          render plain: "TODO Rescue Twitter::Error #{e.message}"
+        end
+      end
 
-    begin
-      @tweets = @client.user_timeline('Lamborghini', count: 50)
-    rescue Twitter::Error
-      render text: 'TODO Rescue Twitter::Error'
+      # format.js do
+      #
+      # end
     end
   end
 end

@@ -1,3 +1,5 @@
+require './lib/twitter_utils/twitter_client'
+
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
@@ -8,5 +10,9 @@ class ApplicationController < ActionController::Base
 
   def authorize
     redirect_to log_in_path unless current_user
+  end
+
+  def twitter_client
+    @twitter_client ||= TwitterUtils::TwitterClient.new
   end
 end
