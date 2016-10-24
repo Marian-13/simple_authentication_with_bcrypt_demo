@@ -1,14 +1,27 @@
-#log-in-panel {
-  @extend .column-3;
-  @extend .column-m-5;
-  @extend .authentication-panel;
-  margin: 1em;
+.log-in-container {
+  @extend .authentication-container;
+}
+
+.log-in {
+  @extend .authentication;
+}
+
+.log-in-heading {
+  @extend .authentication-heading;
+}
+
+.log-in-body {
+  @extend .authentication-body;
+}
+
+.log-in-footer {
+  @extend .authentication-footer;
 }
 
 .log-in-error {
-  @extend .error;
+  @extend .authentication-error;
 }
 
 .log-in-field-with-error {
-  @extend .field-with-error;
+  @extend .authentication-field-with-error;
 }

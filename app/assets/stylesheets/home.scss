@@ -6,8 +6,9 @@
 }
 
 .tweet {
-  border-radius: 4px;
-  box-shadow: 5px 5px 20px gray;
+  font-size: $font-size;
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
 }
 
 .tweet-body {
@@ -22,7 +23,6 @@
 }
 
 .tweet-footer {
-  font-size: 14px;
   padding: 10px 15px;
   border-top: 1px solid #ddd;
   background-color: #f5f5f5;

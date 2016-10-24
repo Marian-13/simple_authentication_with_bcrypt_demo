@@ -1,15 +1,19 @@
-<%= content_tag :div, class: 'panel panel-default', id: 'log-in-panel' do %>
+<%= content_tag :div, class: 'log-in-container' do %>
 
-  <%= content_tag :div, class: 'panel-heading' do %>
-    <%= content_tag :h2, 'Log In' %>
-  <% end %>
+  <%= content_tag :div, class: 'log-in' do %>
 
-  <%= content_tag :div, class: 'panel-body' do %>
-    <%= render 'form' %>
+    <%= content_tag :div, class: 'log-in-heading' do %>
+      <%= content_tag :h2, 'Log In' %>
+    <% end %>
+
+    <%= content_tag :div, class: 'log-in-body' do %>
+      <%= render 'form' %>
+    <% end  %>
+
+    <%= content_tag :div, class: 'log-in-footer' do %>
+      Have no account yet? <%= link_to 'Sign Up', sign_up_path %>
+    <% end %>
+
   <% end  %>
 
-  <%= content_tag :div, class: 'panel-footer' do %>
-    Have no account yet? <%= link_to 'Sign Up', sign_up_path %>
-  <% end %>
-
-<% end  %>
+<% end %>

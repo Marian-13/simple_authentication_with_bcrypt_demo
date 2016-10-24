@@ -21,3 +21,7 @@ label {
 .field_with_errors {
   background-color: rgb(239, 61, 71);
 }
+
+
+/* application.scss */
+/* @import "*"; */

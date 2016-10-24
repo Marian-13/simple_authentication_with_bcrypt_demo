@@ -1,0 +1,45 @@
+/* General */
+.app-row::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* For mobile phones: */
+[class*="column-"] {
+  width: 100%;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+/* For tablets: */
+@media only screen and (min-width: 430px) {
+  .column-m-1  { width: 8.33%;  box-sizing: border-box; display: inline-block; }
+  .column-m-2  { width: 16.66%; box-sizing: border-box; display: inline-block; }
+  .column-m-3  { width: 25%;    box-sizing: border-box; display: inline-block; }
+  .column-m-4  { width: 33.33%; box-sizing: border-box; display: inline-block; }
+  .column-m-5  { width: 41.66%; box-sizing: border-box; display: inline-block; }
+  .column-m-6  { width: 50%;    box-sizing: border-box; display: inline-block; }
+  .column-m-7  { width: 58.33%; box-sizing: border-box; display: inline-block; }
+  .column-m-8  { width: 66.66%; box-sizing: border-box; display: inline-block; }
+  .column-m-9  { width: 75%;    box-sizing: border-box; display: inline-block; }
+  .column-m-10 { width: 83.33%; box-sizing: border-box; display: inline-block; }
+  .column-m-11 { width: 91.66%; box-sizing: border-box; display: inline-block; }
+  .column-m-12 { width: 100%;   box-sizing: border-box; display: inline-block; }
+}
+
+/* For desktop: */
+@media only screen and (min-width: 780px) {
+  .column-1  { width: 8.33%;  box-sizing: border-box; display: inline-block; }
+  .column-2  { width: 16.66%; box-sizing: border-box; display: inline-block; }
+  .column-3  { width: 25%;    box-sizing: border-box; display: inline-block; }
+  .column-4  { width: 33.33%; box-sizing: border-box; display: inline-block; }
+  .column-5  { width: 41.66%; box-sizing: border-box; display: inline-block; }
+  .column-6  { width: 50%;    box-sizing: border-box; display: inline-block; }
+  .column-7  { width: 58.33%; box-sizing: border-box; display: inline-block; }
+  .column-8  { width: 66.66%; box-sizing: border-box; display: inline-block; }
+  .column-9  { width: 75%;    box-sizing: border-box; display: inline-block; }
+  .column-10 { width: 83.33%; box-sizing: border-box; display: inline-block; }
+  .column-11 { width: 91.66%; box-sizing: border-box; display: inline-block; }
+  .column-12 { width: 100%;   box-sizing: border-box; display: inline-block; }
+}

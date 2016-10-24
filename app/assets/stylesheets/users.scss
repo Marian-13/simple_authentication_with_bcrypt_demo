@@ -1,14 +1,27 @@
-#sign-up-panel {
-  @extend .column-3;
-  @extend .column-m-5;
-  @extend .authentication-panel;
-  margin: 1em;
+.sign-up-container {
+  @extend .authentication-container;
+}
+
+.sign-up {
+  @extend .authentication;
+}
+
+.sign-up-heading {
+  @extend .authentication-heading;
+}
+
+.sign-up-body {
+  @extend .authentication-body;
+}
+
+.sign-up-footer {
+  @extend .authentication-footer;
 }
 
 .sign-up-error {
-  @extend .error;
+  @extend .authentication-error;
 }
 
 .sign-up-field-with-error {
-  @extend .field-with-error;
+  @extend .authentication-field-with-error;
 }
