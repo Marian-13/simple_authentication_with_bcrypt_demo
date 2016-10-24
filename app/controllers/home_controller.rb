@@ -12,7 +12,7 @@ class HomeController < ApplicationController
     begin
       @tweets = @client.user_timeline('Lamborghini', count: 50)
     rescue Twitter::Error
-      render 'TODO Rescue Twitter::Error'
+      render text: 'TODO Rescue Twitter::Error'
     end
   end
 end
