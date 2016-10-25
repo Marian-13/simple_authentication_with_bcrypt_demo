@@ -13,6 +13,7 @@ class ApplicationController < ActionController::Base
   end
 
   def twitter_client
-    @twitter_client ||= TwitterUtils::TwitterClient.new
+    # Every request has its own controller instance
+    @@twitter_client ||= TwitterUtils::TwitterClient.new
   end
 end

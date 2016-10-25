@@ -52,12 +52,10 @@ nav {
   }
 }
 
-
-
-.application-body {
+#application-body {
   font-size: 0;
   /* http://stackoverflow.com/questions/2628050/ignore-whitespace-in-html */
-  margin-top: $nav-height;
+  /* TODO margin-top: $nav-height;*/
 }
 
 .authentication-container {

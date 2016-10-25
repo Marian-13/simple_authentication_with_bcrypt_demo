@@ -19,15 +19,7 @@ module TwitterUtils
 
     def fetch_tweets_with_pictures(user_name, count: 5)
       if @tweets_with_pictures_remaining < count
-        # new_tweets = @client.user_timeline(user_name, MAXIMUM_SEARCH_RESULTS)
-
-        new_tweets = @client.user_timeline('Lamborghini', count: MAXIMUM_SEARCH_RESULTS)
-
-        puts '@tweets_with_pictures_remaining'
-        puts @tweets_with_pictures_remaining
-
-        puts 'new_tweets.size'
-        puts new_tweets.size
+        new_tweets = @client.user_timeline(user_name, count: MAXIMUM_SEARCH_RESULTS)
 
         new_tweets.each do |tweet|
           unless tweet.media.blank?
@@ -37,21 +29,10 @@ module TwitterUtils
         end
       end
 
-      puts '@tweets_with_pictures.size'
-      puts @tweets_with_pictures.size
+      @tweets_with_pictures_remaining -= 5
 
       # Deletes the first {count} elements and returns array of them (... in range)
-      puts '@tweets_with_pictures.slice!(0..count)'
-      q = @tweets_with_pictures.slice!(0...count)
-      puts q.size
-
-      # @tweets_with_pictures.slice!(0...count)
-      q
-    end
-
-    def user_timeline(user_name, count: 5)
-      # stub
-      @client.user_timeline('Lamborghini', count: 100)
+      @tweets_with_pictures.slice!(0...count)
     end
   end
 end

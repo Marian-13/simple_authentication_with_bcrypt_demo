@@ -1,0 +1,7 @@
+var applicationBody = $('#application-body');
+
+<% @tweets.each do |tweet| %>
+  applicationBody.append(
+    "<%= escape_javascript(content(tweet)) %>"
+  );
+<% end %>

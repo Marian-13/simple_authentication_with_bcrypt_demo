@@ -28,6 +28,3 @@
 
 #
 /app/assets/images/*.jpg
-
-#
-/app/controllers/home_controller.rb

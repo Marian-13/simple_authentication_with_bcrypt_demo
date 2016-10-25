@@ -5,4 +5,7 @@
 3. Navigation bar
 4. Option to limit amount of tweet
 5. Search tweets by user, tag
-6. Ajax for new tweets 
+6. Ajax for new tweets
+7. Job for tweets processing
+8. Application footer
+9. 
