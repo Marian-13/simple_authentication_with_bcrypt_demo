@@ -2,7 +2,7 @@
   <%= content_tag :div, class: 'tweet' do %>
 
     <%= content_tag :div, class: 'tweet-body' do %>
-      <%= image_tag image_source, class: 'tweet-image' %>
+      <%= image_tag media_source, class: 'tweet-image', alt: 'Picture' %>
     <% end %>
 
     <%= content_tag :div, class: 'tweet-footer' do %>
@@ -13,10 +13,10 @@
       <%= creation_time %> <br />
 
       <%= content_tag :span, class: 'bold' do %>
-        Twitter user name:
+        Link to:
       <% end %>
 
-      <%= link_to twitter_user_name, "https://twitter.com/#{twitter_user_name}" %>
+      <%= link_to 'Source', tweet_link %>
     <% end %>
   <% end %>
 <% end %>

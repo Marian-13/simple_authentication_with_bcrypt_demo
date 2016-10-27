@@ -1,6 +1,9 @@
 .tweet-container {
   @extend .column-3;
-  @extend .column-m-4;
+  @extend .column-ml-6;
+  @extend .column-tp-4;
+  @extend .column-tl-3;
+  @extend .column-3;
 
   border: 5px solid transparent;
 }

@@ -1,5 +1,5 @@
-<%= @tweets.each do |tweet| %>
-  <%= render 'tweet', image_source: tweet.media_url,
+<% @tweets.each do |tweet| %>
+  <%= render 'tweet', media_source: tweet.media_url,
                       creation_time: tweet.creation_time,
-                      twitter_user_name: tweet.user_name %>
+                      tweet_link: tweet.link %>
 <% end  %>

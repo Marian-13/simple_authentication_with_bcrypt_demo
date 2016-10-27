@@ -12,3 +12,8 @@
 10. Current user in class variable?
 11. Right way to track search query modification
 12. Tweets by tag
+13. More responsive
+14. Http and Https issue
+15. Mozilla do not track !!!
+16. Handle different types of media (photos, gifs, videos)
+17. DRY media queries

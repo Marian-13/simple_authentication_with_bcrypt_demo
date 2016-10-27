@@ -5,41 +5,105 @@
   display: block;
 }
 
-/* For mobile phones: */
-[class*="column-"] {
-  width: 100%;
+@mixin column {
   box-sizing: border-box;
   display: inline-block;
 }
 
-/* For tablets: */
-@media only screen and (min-width: 430px) {
-  .column-m-1  { width: 8.33%;  box-sizing: border-box; display: inline-block; }
-  .column-m-2  { width: 16.66%; box-sizing: border-box; display: inline-block; }
-  .column-m-3  { width: 25%;    box-sizing: border-box; display: inline-block; }
-  .column-m-4  { width: 33.33%; box-sizing: border-box; display: inline-block; }
-  .column-m-5  { width: 41.66%; box-sizing: border-box; display: inline-block; }
-  .column-m-6  { width: 50%;    box-sizing: border-box; display: inline-block; }
-  .column-m-7  { width: 58.33%; box-sizing: border-box; display: inline-block; }
-  .column-m-8  { width: 66.66%; box-sizing: border-box; display: inline-block; }
-  .column-m-9  { width: 75%;    box-sizing: border-box; display: inline-block; }
-  .column-m-10 { width: 83.33%; box-sizing: border-box; display: inline-block; }
-  .column-m-11 { width: 91.66%; box-sizing: border-box; display: inline-block; }
-  .column-m-12 { width: 100%;   box-sizing: border-box; display: inline-block; }
+/*  If 12 columns then max tweets per line = 4 */
+/*  1   225 -  450 "mobile portrait"  */
+/*  2   450 -  675 "mobile landscape" */
+/*  3   675 -  900 "tablet portrait"  */
+/*  4   900 - 1125 "tablet landscape" */
+/*  5  1125 - 1350 "small laptop"     */
+/*  6  1350 - 1575 "medium laptop"    */
+/*  7  1575 - oo   "large laptop"     */
+
+/*  1   225 -  450 "mobile portrait"  */
+/* (min-width: 0) */
+[class*="column-"] {
+  @include column;
+  width: 100%;
 }
 
-/* For desktop: */
-@media only screen and (min-width: 780px) {
-  .column-1  { width: 8.33%;  box-sizing: border-box; display: inline-block; }
-  .column-2  { width: 16.66%; box-sizing: border-box; display: inline-block; }
-  .column-3  { width: 25%;    box-sizing: border-box; display: inline-block; }
-  .column-4  { width: 33.33%; box-sizing: border-box; display: inline-block; }
-  .column-5  { width: 41.66%; box-sizing: border-box; display: inline-block; }
-  .column-6  { width: 50%;    box-sizing: border-box; display: inline-block; }
-  .column-7  { width: 58.33%; box-sizing: border-box; display: inline-block; }
-  .column-8  { width: 66.66%; box-sizing: border-box; display: inline-block; }
-  .column-9  { width: 75%;    box-sizing: border-box; display: inline-block; }
-  .column-10 { width: 83.33%; box-sizing: border-box; display: inline-block; }
-  .column-11 { width: 91.66%; box-sizing: border-box; display: inline-block; }
-  .column-12 { width: 100%;   box-sizing: border-box; display: inline-block; }
+/*  2   450 -  675 "mobile landscape" */
+@media only screen and (min-width: 450px) {
+  .column-ml-1  { @include column; width: 8.33%;  }
+  .column-ml-2  { @include column; width: 16.66%; }
+  .column-ml-3  { @include column; width: 25%;    }
+  .column-ml-4  { @include column; width: 33.33%; }
+  .column-ml-5  { @include column; width: 41.66%; }
+  .column-ml-6  { @include column; width: 50%;    }
+  .column-ml-7  { @include column; width: 58.33%; }
+  .column-ml-8  { @include column; width: 66.66%; }
+  .column-ml-9  { @include column; width: 75%;    }
+  .column-ml-10 { @include column; width: 83.33%; }
+  .column-ml-11 { @include column; width: 91.66%; }
+  .column-ml-12 { @include column; width: 100%;   }
 }
+
+/*  3   675 -  900 "tablet portrait"  */
+@media only screen and (min-width: 675px) {
+  .column-tp-1  { @include column; width: 8.33%;  }
+  .column-tp-2  { @include column; width: 16.66%; }
+  .column-tp-3  { @include column; width: 25%;    }
+  .column-tp-4  { @include column; width: 33.33%; }
+  .column-tp-5  { @include column; width: 41.66%; }
+  .column-tp-6  { @include column; width: 50%;    }
+  .column-tp-7  { @include column; width: 58.33%; }
+  .column-tp-8  { @include column; width: 66.66%; }
+  .column-tp-9  { @include column; width: 75%;    }
+  .column-tp-10 { @include column; width: 83.33%; }
+  .column-tp-11 { @include column; width: 91.66%; }
+  .column-tp-12 { @include column; width: 100%;   }
+}
+
+/*  4   900 - 1125 "tablet landscape" */
+@media only screen and (min-width: 900px) {
+  .column-tl-1  { @include column; width: 8.33%;  }
+  .column-tl-2  { @include column; width: 16.66%; }
+  .column-tl-3  { @include column; width: 25%;    }
+  .column-tl-4  { @include column; width: 33.33%; }
+  .column-tl-5  { @include column; width: 41.66%; }
+  .column-tl-6  { @include column; width: 50%;    }
+  .column-tl-7  { @include column; width: 58.33%; }
+  .column-tl-8  { @include column; width: 66.66%; }
+  .column-tl-9  { @include column; width: 75%;    }
+  .column-tl-10 { @include column; width: 83.33%; }
+  .column-tl-11 { @include column; width: 91.66%; }
+  .column-tl-12 { @include column; width: 100%;   }
+}
+
+/*  5  1125 - 1350 "small laptop"     */
+@media only screen and (min-width: 1125px) {
+  .column-1  { @include column; width: 8.33%;  }
+  .column-2  { @include column; width: 16.66%; }
+  .column-3  { @include column; width: 25%;    }
+  .column-4  { @include column; width: 33.33%; }
+  .column-5  { @include column; width: 41.66%; }
+  .column-6  { @include column; width: 50%;    }
+  .column-7  { @include column; width: 58.33%; }
+  .column-8  { @include column; width: 66.66%; }
+  .column-9  { @include column; width: 75%;    }
+  .column-10 { @include column; width: 83.33%; }
+  .column-11 { @include column; width: 91.66%; }
+  .column-12 { @include column; width: 100%;   }
+}
+
+/*  6  1350 - 1575 "medium laptop"    */
+/* @media only screen and (min-width: 1350px) {
+  .column-1  { @include column; width: 8.33%;  }
+  .column-2  { @include column; width: 16.66%; }
+  .column-3  { @include column; width: 25%;    }
+  .column-4  { @include column; width: 33.33%; }
+  .column-5  { @include column; width: 41.66%; }
+  .column-6  { @include column; width: 50%;    }
+  .column-7  { @include column; width: 58.33%; }
+  .column-8  { @include column; width: 66.66%; }
+  .column-9  { @include column; width: 75%;    }
+  .column-10 { @include column; width: 83.33%; }
+  .column-11 { @include column; width: 91.66%; }
+  .column-12 { @include column; width: 100%;   }
+}*/
+
+/*  7  1575 - oo   "large laptop"     */

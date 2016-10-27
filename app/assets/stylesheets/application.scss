@@ -29,7 +29,8 @@ nav {
 
   div {
     @extend .column-2;
-    @extend .column-m-2;
+
+    /* TODO */
   }
 
   ul {
@@ -60,7 +61,7 @@ nav {
 
 .authentication-container {
   @extend .column-3;
-  @extend .column-m-4;
+  @extend .column-ml-4;
 
   border: 5px solid transparent;
 }
