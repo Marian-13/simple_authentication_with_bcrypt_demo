@@ -8,19 +8,18 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <% if current_user %>
-      Signed in as <%= current_user.name %> | <%= link_to 'Log out', log_out_path %> |
-    <% else %>
-      <%= link_to 'Log in', log_in_path %> | <%= link_to 'Sign up', sign_up_path %>
-    <% end %>
-
     <div id="application-body">
       <%= yield %>
     </div>
 
     <% if current_user %>
-      <%= link_to 'More Tweets', root_path, remote: true,
-                                            class: 'btn btn-primary' %>
+      <footer>
+        <%= label_tag 'more-tweets-submit', 'More Tweets', class: 'btn btn-primary' %>
+
+        <button class="btn btn-default" id="footer-options-toggler">&#9776;</button>
+
+        <%= render 'home/more_tweets_options', user: current_user %>
+      </footer>
     <% end %>
   </body>
 </html>

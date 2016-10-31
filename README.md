@@ -17,3 +17,5 @@
 15. Mozilla do not track !!!
 16. Handle different types of media (photos, gifs, videos)
 17. DRY media queries
+18. Tooltips
+19. HAndle Errors

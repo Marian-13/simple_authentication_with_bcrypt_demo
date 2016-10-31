@@ -33,9 +33,50 @@
   border-bottom-right-radius: inherit;
 }
 
-/*
-body > *:nth-child(5n+1) {
-  clear: left;
-}*/
-
 /* border-box doesn`t include margin */
+
+#footer-options-toggler {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+#footer-options-container {
+  @extend .column-3;
+  @extend .column-ml-6;
+  @extend .column-tp-4;
+  @extend .column-tl-3;
+  @extend .column-3;
+
+  border: 5px solid transparent;
+  display: none;
+  margin: auto;
+}
+
+.footer-options {
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
+}
+
+.footer-options-heading {
+  padding: 10px 15px;
+  /* background-color: #f5f5f5;*/
+  border: 1px solid #dddddd;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+.footer-options-body {
+  padding: 15px;
+  /* background-color: #fff; */
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+}
+
+.footer-options-footer {
+  padding: 10px 15px;
+  /*background-color: #f5f5f5;*/
+  border: 1px solid #dddddd;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}

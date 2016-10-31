@@ -5,15 +5,19 @@ class HomeController < ApplicationController
     respond_to do |format|
       format.html do
         begin
-          @tweets = twitter_client.fetch_tweets_with_pictures('Lamborghini', count: 5)
+          @tweets = twitter_client.fetch_tweets_with_pictures('Lamborghini', :user_name, count: 5)
         rescue Twitter::Error => e
           render plain: "TODO Rescue Twitter::Error #{e.message}"
         end
       end
+    end
+  end
 
+  def create
+    respond_to do |format|
       format.js do
         begin
-          @tweets = twitter_client.fetch_tweets_with_pictures('Lamborghini', count: 5)
+          @tweets = twitter_client.fetch_tweets_with_pictures(params[:search_query], params[:search_type])
         rescue Twitter::Error => e
           render plain: "TODO Rescue Twitter::Error #{e.message}"
         end

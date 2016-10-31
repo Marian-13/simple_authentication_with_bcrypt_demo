@@ -1,0 +1,36 @@
+<%= content_tag :div, id: 'footer-options-container' do %>
+
+  <%= content_tag :div, class: 'footer-options' do %>
+
+    <%= content_tag :div, class: 'footer-options-heading' do %>
+      <%= content_tag :h3, 'More tweets options' %>
+    <% end %>
+
+    <%= content_tag :div, class: 'footer-options-body' do %>
+      <% # TODO remove hardcode %>
+      <%= form_tag root_path, remote: true, class: 'form-group' do %>
+        <%= label_tag :search_type, 'Search type:' %>
+        <%= select_tag :search_type,
+                       options_for_select([['By user name', :user_name], ['By tag', :tag]]),
+                       class: 'form-control' %>
+
+        <%= label_tag :search_query, 'Search query:' %>
+        <%= text_field_tag :search_query, nil, class: 'form-control',
+                                               value: 'Lamborghini' %>
+        <br />
+        <%= submit_tag 'More tweets', class: 'btn btn-primary', id: 'more-tweets-submit' %>
+      <% end %>
+    <% end  %>
+
+    <%= content_tag :div, class: 'footer-options-footer' do %>
+      Signed in as <%= user.name %><br />
+
+      <%= link_to log_out_path do %>
+        <span class="glyphicon glyphicon-log-out"></span>
+        Log out
+      <% end %>
+    <% end %>
+
+  <% end %>
+
+<% end %>

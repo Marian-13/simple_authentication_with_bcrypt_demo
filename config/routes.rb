@@ -7,5 +7,8 @@ Rails.application.routes.draw do
 
   get '/log_out', to: 'sessions#destroy'
 
+  get  '/', to: 'home#index'
+  post '/', to: 'home#create'
+
   root 'home#index'
 end
